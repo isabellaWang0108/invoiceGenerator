@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import $ from "jquery"
+import TextInput from "../components/inputSession"
 
 export default function Home() {
-
   return (
     <div className={styles.container}>
       <Head>
@@ -10,15 +11,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <div className={styles.editArea}
-          style={{ width: this.state.boardWidth }}
-          draggable
-          onDragStart={() => console.log('hi')}
-          onDragOver={() => console.log('in progress')}
-          onDragLeave={() => console.log('bye')}
+      <main className={styles.main}
+        // onDragStart={() => console.log('hi')}
+        // onDragOver={(e) => console.log($('.editArea').css())}
+        // onDragLeave={() => console.log('bye')}
         >
-          <h1 className={styles.title}>  Invoice Generator </h1>
+
+        <div className={styles.editArea}
+          draggable>
+          <h1 className={styles.title} >  Invoice Generator </h1>
+          <TextInput
+          label="hi"></TextInput>
         </div>
 
 
